@@ -1,6 +1,14 @@
 <template>
   <div class="knowee-sidebar">
-    <p class="text-lg text-red-500 font-bold p-8">tailwindcss</p>
+    <Header></Header>
+    <div class="p-10 text-lg font-bold text-red-900">tailwindcss</div>
+    <div class="p-20 text-lg font-bold text-red-500">tailwindcss1</div>
+    <div
+      class="flex justify-between w-full p-10 text-lg font-bold text-red-900"
+    >
+      <span>2222</span>
+      <div>3333333333</div>
+    </div>
     <el-button type="success" @click="sayHello">通信测试</el-button>
     <el-button type="success" @click="open">打开pdf预览</el-button>
   </div>
@@ -10,6 +18,7 @@
 // import { Button } from "ant-design-vue";
 import { ref, watch, computed, provide } from "vue";
 import { useDraggable, useWindowSize, Position } from "@vueuse/core";
+import Header from "@/pages/Header/index.vue";
 
 const sayHello = async () => {
   const response = await browser.runtime.sendMessage({
@@ -32,12 +41,4 @@ browser.runtime.onMessage.addListener(async (message) => {
 });
 </script>
 
-<style scoped lang="scss">
-.knowee-sidebar {
-  pointer-events: auto;
-  position: fixed;
-  right: 0;
-  top: 50%;
-  //   background-color: blueviolet;
-}
-</style>
+<style scoped lang="scss"></style>

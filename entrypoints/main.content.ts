@@ -6,6 +6,8 @@ import i18n from "../locales/index";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import "~/assets/tailwind.css";
+import "~/assets/variables.scss";
+// import "tailwindcss/tailwind.css";
 export default defineContentScript({
   matches: ["<all_urls>"],
   cssInjectionMode: "ui",
@@ -37,7 +39,7 @@ function defineOverlay(ctx: ContentScriptContext) {
       app.use(ElementPlus);
       app.mount(container);
 
-      shadowHost.style.pointerEvents = "auto";
+      shadowHost.style.pointerEvents = "none";
       return app;
     },
     onRemove(app) {

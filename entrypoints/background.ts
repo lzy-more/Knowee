@@ -47,7 +47,8 @@ export default defineBackground(() => {
       redirectIfIsPdf(tab);
     }
   );
-
+  //右上角图标点击
+  browser.action.onClicked.addListener(async (tab: any) => {});
   // 检测-pdf重定向
   async function redirectIfIsPdf(tab: any) {
     if (!tab || !tab.id) {

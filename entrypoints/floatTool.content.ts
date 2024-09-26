@@ -8,15 +8,13 @@ export default defineContentScript({
   cssInjectionMode: "ui",
 
   async main(ctx) {
-    const ui = await defineOverlay(ctx);
-
-    // Mount initially
-    ui.mount();
-
-    // Re-mount when page changes
-    ctx.addEventListener(window, "wxt:locationchange", (event) => {
-      ui.mount();
-    });
+    // const ui = await defineOverlay(ctx);
+    // // Mount initially
+    // ui.mount();
+    // // Re-mount when page changes
+    // ctx.addEventListener(window, "wxt:locationchange", (event) => {
+    //   ui.mount();
+    // });
   },
 });
 

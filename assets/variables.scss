@@ -4,3 +4,15 @@ $secondary-color: #2ecc71;
 .color {
   color: $secondary-color;
 }
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-start {
+  align-items: flex-start;
+}
